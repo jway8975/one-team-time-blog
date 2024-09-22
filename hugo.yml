@@ -1,26 +1,14 @@
 baseURL: ""
 title: "一茶时"
 languageCode: "en-us"
+enableRobotsTXT: true
 theme: "PaperMod"
-
-# Menus
-menu:
-  main:
-    - name: "Home"
-      url: "/"
-      weight: 1
-    - name: "文章"
-      url: "/posts"
-      weight: 2
-    - name: "搜索"
-      url: "/search"
-      weight: 3
 
 # SEO and metadata
 params:
   author: "Jway"
-  description: "随心随想"
-  keywords: ["blog", "hugo", "papermod", "example"]
+  description: "一茶一时光，一思一流年"
+  keywords: ["blog", "jway", "think"]
   dateFormat: "Jan 2, 2006"
 
   homeInfoParams:
@@ -30,7 +18,7 @@ params:
   profileMode:
     enabled: true
     title: "one-tea-time" # optional default will be site title
-    subtitle: "一叶一茶一思"
+    subtitle: "一茶一时光，一思一流年"
     imageUrl: "/images/butterfly.jpg" # optional
     #imageTitle: "" # optional
     imageWidth: 240 # custom size
@@ -74,6 +62,27 @@ params:
   cover:
     responsiveImages: false
 
+# Menus
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "文章"
+      url: "/posts"
+      weight: 2
+    - name: "搜索"
+      url: "/search"
+      weight: 3
+
+# Taxonomies (categories, tags)
+taxonomies:
+  category: "categories"
+  tag: "tags"
+
+pagination:
+  pagerSize: 10
+  
 # Output formats
 outputs:
   home: ["HTML", "RSS", "JSON"]
