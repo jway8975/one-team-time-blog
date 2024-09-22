@@ -1,0 +1,91 @@
+baseURL: ""
+title: "一茶时"
+languageCode: "en-us"
+theme: "PaperMod"
+
+# Menus
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "文章"
+      url: "/posts"
+      weight: 2
+    - name: "搜索"
+      url: "/search"
+      weight: 3
+
+# SEO and metadata
+params:
+  author: "Jway"
+  description: "随心随想"
+  keywords: ["blog", "hugo", "papermod", "example"]
+  dateFormat: "Jan 2, 2006"
+
+  homeInfoParams:
+    Title: Hi there wave
+    Content: Can be Info, links, about...
+
+  profileMode:
+    enabled: true
+    title: "one-tea-time" # optional default will be site title
+    subtitle: "一叶一茶一思"
+    imageUrl: "/images/butterfly.jpg" # optional
+    #imageTitle: "" # optional
+    imageWidth: 240 # custom size
+    imageHeight: 240 # custom size
+    # buttons:
+    #   - name: Archive
+    #     url: "/archive"
+    #   - name: Github
+    #     url: "https://github.com/"
+  
+  # Enable features
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true # 显示上一篇和下一篇
+  ShowCodeCopyButtons: true # 代码块显示copy按钮
+  ShowToc: true  # Table of contents 显示目录
+  TocOpen: false  # TOC expanded by default 保持目录打开
+
+  # Social media links
+  # socialIcons:
+  #   - name: "GitHub"
+  #     url: "https://github.com/yourname"
+  #     icon: "github"
+  #   - name: "Twitter"
+  #     url: "https://twitter.com/yourname"
+  #     icon: "twitter"
+  #   - name: "LinkedIn"
+  #     url: "https://linkedin.com/in/yourname"
+  #     icon: "linkedin"
+
+  # Post configuration
+  defaultTheme: "auto"  # dark, light, auto
+  disableThemeToggle: false  # show theme switcher
+  archivePaginate: 10  # number of posts per page in archive
+  favicon: "/images/favicon.ico"  # path to the favicon
+  
+  # Commenting systems
+  disqusShortname: "your-disqus-shortname"  # Enable Disqus comments
+  # Commento, Utterances, or other comment systems are also supported
+
+  cover:
+    responsiveImages: false
+
+# Output formats
+outputs:
+  home: ["HTML", "RSS", "JSON"]
+  section: ["HTML", "RSS"]
+
+# 搜索
+fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
